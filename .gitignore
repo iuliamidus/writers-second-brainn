@@ -4,6 +4,17 @@ second_brain.db-journal
 second_brain.db-wal
 second_brain.db-shm
 
+# Personal config. Copy sources.example.yaml → sources.yaml and edit locally;
+# don't commit your own blog list into a fork of the tool itself.
+sources.yaml
+
+# Everything `wsb site build` writes into the deploy tree. Belongs in your
+# private instance repo, not the public one.
+/index.html
+/data.json
+/vercel.json
+/api/
+
 __pycache__/
 *.py[cod]
 .venv/

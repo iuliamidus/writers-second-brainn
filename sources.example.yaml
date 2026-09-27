@@ -1,0 +1,26 @@
+# Blogs to ingest. Copy this file to `sources.yaml` and edit for your archive.
+#
+# `url` is required. `platform` is auto-detected if omitted, but pinning it
+# avoids a probe request on every run. `default_lang` is the fallback for
+# posts too short to language-detect reliably — a blog full of photo posts
+# with two-word captions can be a lot of them.
+#
+# Supported platforms today: wordpress_com, wordpress_self_hosted, blogger, rss.
+
+sources:
+  - slug: my-blog
+    url: https://myblog.wordpress.com
+    platform: wordpress_com
+    default_lang: en
+
+  - slug: my-other-blog
+    url: https://myotherblog.blogspot.com
+    platform: blogger
+    default_lang: en
+
+  # Any RSS/Atom feed works too — good for Substack, Ghost, Medium, and any
+  # static-site generator that emits a feed.
+  # - slug: substack-newsletter
+  #   url: https://someone.substack.com/feed
+  #   platform: rss
+  #   default_lang: en
